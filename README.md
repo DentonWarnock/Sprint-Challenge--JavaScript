@@ -30,13 +30,36 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. Describe the biggest difference between `.forEach` & `.map`.
 
+--> .map returns a value into a new array, while .forEach does not return anything.
+
 2. What is the difference between a function and a method?
+
+--> A function takes parameters and returns one or more values, .this will be bound to the window or global. A method is also a function 
+that is a property in an object. In a method, .this is bound to the parent object.
 
 3. What is closure?
 
+--> Closure gives you access to an outer functions scope from an inner function. The global scope andouter functions
+will never have access to the scope inside of nested functions. This can go several layers deep.
+
 4. Describe the four rules of the 'this' keyword.
 
+--> 1. Global Binding - When in the global scope or inside of a function but not an object,
+"this" will be bound to the "window object" within the browser. 
+
+--> 2. Implicit Binding - Or Implied binding is when a function(or method) is called inside of an object. The "this" keyword 
+will be bound to the object to the left of the "."(dot) when called. (exampleObjThisWillBeCalledTo.call();)
+    
+--> 3. New Binding - Happens when a 'new' instance of a constructor function is called and the 'this' will be bound
+to the new object that is created.
+
+--> 4. Explicit Binding - Happens when a .call, .apply, or .bind method is used on an already initialized object. 'This'
+will be bound to the new arguments passed in with the .call, .apply, or .bind.
+
 5. Why do we need super() in an extended class?
+
+super() is needed to extend the properties and methods of the parent class to the new extended class. this.anything cannot be called 
+or defined until super() is called first.
 
 ## Project Set up
 
